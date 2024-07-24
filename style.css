@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+nav {
+    height: 70px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.gameContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    position: relative;
+}
+
+.line {
+    background-color: rgb(11, 231, 22);
+    width: 0;
+    height: 3px;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+.box {
+    border: 2px solid white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: rgb(43, 21, 21);
+}
+
+.boxtext {
+    color: red;
+    font-size: 12vw;
+    margin-bottom: 3vw;
+}
+
+.gameControl {
+    padding: 0px 38px;
+}
+
+.info {
+    padding: 10px;
+    display: block;
+}
+
+#reset {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+i {
+    color: white;
+    font-size: 1.4rem;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.bt-0 {
+    border-top: none;
+}
+
+.bl-0 {
+    border-left: none;
+}
+
+.br-0 {
+    border-right: none;
+}
+
+.bb-0 {
+    border-bottom: none;
+}
+
+.x {
+    color: red;
+}
+
+.o {
+    color: blue;
+}
+
+@media screen and (max-width: 800px) {
+    .gameContainer {
+        flex-wrap: wrap;
+    }
+
+    .gameControl {
+        margin-top: 20px;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 14vw);
+        grid-template-rows: repeat(3, 14vw);
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        font-size: 1.5rem;
+    }
+
+    i {
+        font-size: 1.5rem;
+    }
+}
